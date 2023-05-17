@@ -17,7 +17,7 @@ public class RomanPrinterTest {
  }
 
  @Test
- public void Print1ASCII() throws NegativeNumberException, ZeroException,
+ public void Print1ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException{
   int number= 1;
   String ascii= RomanPrinter.print(number);
@@ -34,7 +34,7 @@ public class RomanPrinterTest {
 
 
  @Test
- public void Print5ASCII() throws NegativeNumberException, ZeroException,
+ public void Print5ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException {
   int number= 5;
   String ascii= RomanPrinter.print(number);
@@ -51,7 +51,7 @@ public class RomanPrinterTest {
 
 
  @Test
- public void Print10ASCII() throws NegativeNumberException, ZeroException,
+ public void Print10ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException{
   int number= 10;
   String ascii= RomanPrinter.print(number);
@@ -68,7 +68,7 @@ public class RomanPrinterTest {
 
 
  @Test
- public void Print50ASCII() throws NegativeNumberException, ZeroException,
+ public void Print50ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException{
   int number= 50;
   String ascii= RomanPrinter.print(number);
@@ -86,7 +86,7 @@ public class RomanPrinterTest {
 
 
  @Test
- public void Print100ASCII() throws NegativeNumberException, ZeroException,
+ public void Print100ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException{
   int number= 100;
   String ascii= RomanPrinter.print(number);
@@ -103,7 +103,7 @@ public class RomanPrinterTest {
  }
 
  @Test
- public void Print500ASCII() throws NegativeNumberException, ZeroException,
+ public void Print500ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException{
   int number= 500;
   String ascii= RomanPrinter.print(number);
@@ -120,7 +120,7 @@ public class RomanPrinterTest {
  }
 
  @Test
- public void Print1000ASCII() throws NegativeNumberException, ZeroException,
+ public void Print1000ASCII() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException{
   int number= 1000;
   String ascii= RomanPrinter.print(number);
@@ -136,7 +136,7 @@ public class RomanPrinterTest {
  }
 
  @Test(expected = NotRomanLetterException.class)
- public void PrintNotRomanLetter() throws NegativeNumberException, ZeroException,
+ public void PrintNotRomanLetter() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException {
 
   try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
@@ -147,7 +147,7 @@ public class RomanPrinterTest {
 
 
  @Test(expected = NullPointerException.class)
- public void PrintNullInput() throws NegativeNumberException,
+ public void PrintNullInput() throws NegativeException,
  BiggerThan1000Exception, NotRomanException, ZeroException {
  try (MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)) {
   utilities.when(() -> IntegerToRoman.convert(123)).thenReturn(null);

@@ -6,7 +6,7 @@
 package it.unipd.mtss;
 
 public class NegativeException extends Exception {
-	public NegativeException() {
-		super("I numeri negativi non sono rappresentabili nel sistema di numerazione romano.");
-	}
+  public NegativeException() {
+    super("I numeri negativi non sono rappresentabili nel sistema di numerazione romano.");
+  }
 }

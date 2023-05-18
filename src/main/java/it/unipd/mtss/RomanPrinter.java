@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class RomanPrinter {
  public static String print(int num) throws ZeroException, NegativeException,
- BiggerThan1000Exception{
+ BiggerThan1000Exception, NotRomanException {
   return printAsciiArt(IntegerToRoman.convert(num));
  }
 

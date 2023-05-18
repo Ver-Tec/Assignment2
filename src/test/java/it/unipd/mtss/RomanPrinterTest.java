@@ -135,7 +135,7 @@ public class RomanPrinterTest {
   assertEquals(M , ascii);
  }
 
- @Test(expected = NotRomanLetterException.class)
+ @Test(expected = NotRomanException.class)
  public void PrintNotRomanLetter() throws NegativeException, ZeroException,
  BiggerThan1000Exception, NotRomanException {
 

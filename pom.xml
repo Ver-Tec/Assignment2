@@ -34,7 +34,6 @@
   </dependencies>
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -67,9 +66,7 @@
               <version>2.3.1</version>
           </dependency>
         </dependencies>
-        <configuration>
-          <repoToken>${env.COVERALLS_REPO_TOKEN}</repoToken>
-        </configuration>
+        
       </plugin>
       
         <plugin>
@@ -90,6 +87,9 @@
           </execution>
         </executions>
       </plugin>
+     </plugins>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+     <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
